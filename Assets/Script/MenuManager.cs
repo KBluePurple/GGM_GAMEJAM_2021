@@ -9,25 +9,25 @@ public class MenuManager : MonoBehaviour
 
     int CurrentMenu = 0;
     
-    void ChangeMenu1()
+    public void ChangeMenu1()
     {
         Menus[CurrentMenu].SetActive(false);
         CurrentMenu = 0;
         Menus[CurrentMenu].SetActive(true);
     }
-    void ChangeMenu2()
+    public void ChangeMenu2()
     {
         Menus[CurrentMenu].SetActive(false);
         CurrentMenu = 1;
         Menus[CurrentMenu].SetActive(true);
     }
-    void ChangeMenu3()
+    public void ChangeMenu3()
     {
         Menus[CurrentMenu].SetActive(false);
         CurrentMenu = 2;
         Menus[CurrentMenu].SetActive(true);
     }
-    void ChangeMenu4()
+    public void ChangeMenu4()
     {
         Menus[CurrentMenu].SetActive(false);
         CurrentMenu = 3;
