@@ -15,4 +15,24 @@ public class AudioManager : MonoBehaviour
     {
         this.audioSource = GetComponent<AudioSource>();
     }
+
+    void PlaySound(string action)
+    {
+        switch (action)
+        {
+            case "CHOOSE":
+                audioSource.clip = audioChoose;
+                break;
+            case "FALSE":
+                audioSource.clip = audioFalse;
+                break;
+            case "ATTACK":
+                audioSource.clip = audioAttack;
+                break;
+            case "DIE":
+                audioSource.clip = audioDie;
+                break;
+        }
+        audioSource.Play();
+    }
 }
