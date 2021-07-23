@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 530333438077321458fdff327e898cb6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - audioChoose: {fileID: 8300000, guid: 56ced16449bee844a888f8e5ecca475a, type: 3}
+  - audioFalse: {fileID: 8300000, guid: 4baa36b99f6a52d4b812115b0eee03d5, type: 3}
+  - audioAttack: {fileID: 8300000, guid: caaa8948dd554194da39e03aca90c191, type: 3}
+  - audioDie: {fileID: 8300000, guid: 04b56014a0367544cb0f72e4246b762a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
