@@ -4,43 +4,44 @@ using UnityEngine;
 
 public class Upgrade : MonoBehaviour
 {
-    GraphicCardManager graphicCardManager = null;
-    MoneyManager moneyManager = null;
+    [SerializeField]
+    GraphicCard[] GraphicCards;
+
+    GameManager gameManager = null;
     void Start()
     {
-        graphicCardManager = FindObjectOfType<GraphicCardManager>();
-        moneyManager = FindObjectOfType<MoneyManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     public void LevelUpCheck1()
     {
-        if (graphicCardManager.graphicCard1Level * 100 >= moneyManager.money) return;
-        moneyManager.money -= graphicCardManager.graphicCard1Level * 100;
-        graphicCardManager.LevelUp1();
+        if (GraphicCards[0].level * 100 >= gameManager.money) return;
+        gameManager.money -= GraphicCards[0].level * 100;
+        GraphicCards[0].levelUp();
     }
 
     public void LevelUpCheck2()
     {
-        if (graphicCardManager.graphicCard2Level * 500 >= moneyManager.money) return;
-        moneyManager.money -= graphicCardManager.graphicCard2Level * 500;
-        graphicCardManager.LevelUp2();
+        if (GraphicCards[1].level * 500 >= gameManager.money) return;
+        gameManager.money -= GraphicCards[1].level * 500;
+        GraphicCards[1].levelUp();
     }
     public void LevelUpCheck3()
     {
-        if (graphicCardManager.graphicCard3Level * 1000 >= moneyManager.money) return;
-        moneyManager.money -= graphicCardManager.graphicCard3Level * 1000;
-        graphicCardManager.LevelUp3();
+        if (GraphicCards[2].level * 1000 >= gameManager.money) return;
+        gameManager.money -= GraphicCards[2].level * 1000;
+        GraphicCards[2].levelUp();
     }
     public void LevelUpCheck4()
     {
-        if (graphicCardManager.graphicCard4Level * 2500 >= moneyManager.money) return;
-        moneyManager.money -= graphicCardManager.graphicCard4Level * 2500;
-        graphicCardManager.LevelUp4();
+        if (GraphicCards[3].level * 2500 >= gameManager.money) return;
+        gameManager.money -= GraphicCards[3].level * 2500;
+        GraphicCards[3].levelUp();
     }
     public void LevelUpCheck5()
     {
-        if (graphicCardManager.graphicCard5Level * 5000 >= moneyManager.money) return;
-        moneyManager.money -= graphicCardManager.graphicCard5Level * 5000;
-        graphicCardManager.LevelUp5();
+        if (GraphicCards[4].level * 5000 >= gameManager.money) return;
+        gameManager.money -= GraphicCards[4].level * 5000;
+        GraphicCards[4].levelUp();
     }
 }
