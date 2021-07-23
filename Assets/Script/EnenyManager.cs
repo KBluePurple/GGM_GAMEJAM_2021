@@ -7,44 +7,44 @@ public class EnenyManager : MonoBehaviour
     public double enemyLevel = 1;
     double[] enemyHp = new double[] { 1, 50, 100, 250, 300, 400, 500, 600, 800, 1000};
 
-    public void EnemmyOneHpCheck()
+    public void BiteHpCheck()
     {
         enemyHp[0] = enemyLevel * 10;
     }
 
-    public void EnemmyTwoHpCheck()
+    public void PopCatHpCheck()
     {
         enemyHp[1] = enemyLevel * 50;
     }
-    public void EnemmyThreeHpCheck()
+    public void GgmHpCheck()
     {
         enemyHp[2] = enemyLevel * 100;
     }
-    public void EnemmyFourHpCheck()
+    public void ThreethereumHpCheck()
     {
         enemyHp[3] = enemyLevel * 250;
     }
-    public void EnemmyFiveHpCheck()
+    public void CyberPunkHpCheck()
     {
         enemyHp[4] = enemyLevel * 300;
     }
-    public void EnemmySixHpCheck()
+    public void DonxenHpCheck()
     {
         enemyHp[5] = enemyLevel * 400;
     }
-    public void EnemmySevenHpCheck()
+    public void PlayStationHpCheck()
     {
         enemyHp[6] = enemyLevel * 500;
     }
-    public void EnemmyEightHpCheck()
+    public void UnityHpCheck()
     {
         enemyHp[7] = enemyLevel * 600;
     }
-    public void EnemmyNineHpCheck()
+    public void RealHpCheck()
     {
         enemyHp[8] = enemyLevel * 800;
     }
-    public void EnemmyTenHpCheck()
+    public void SteamHpCheck()
     {
         enemyHp[9] = enemyLevel * 1000;
     }
