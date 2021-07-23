@@ -32,7 +32,7 @@ public class EnenyManager : MonoBehaviour
     {
         enemyHp[5] = enemyLevel * 400;
     }
-    public void PlayStationHpCheck()
+    public void PlayShopHpCheck()
     {
         enemyHp[6] = enemyLevel * 500;
     }
