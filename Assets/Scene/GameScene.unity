@@ -297,7 +297,6 @@ GameObject:
   m_Component:
   - component: {fileID: 54652468}
   - component: {fileID: 54652467}
-  - component: {fileID: 54652466}
   m_Layer: 0
   m_Name: PopCamara
   m_TagString: Untagged
@@ -305,14 +304,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &54652466
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54652465}
-  m_Enabled: 1
 --- !u!20 &54652467
 Camera:
   m_ObjectHideFlags: 0
@@ -1251,8 +1242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 5
-  damage: 5
+  upgradeValue: 1
+  damage: 0
   level: 1
   IsAttacking: 0
 --- !u!212 &166780962
@@ -3822,8 +3813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 2.5
-  damage: 2.5
+  upgradeValue: 1
+  damage: 0
   level: 1
   IsAttacking: 0
 --- !u!212 &457097296
@@ -3921,8 +3912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 10
-  damage: 10
+  upgradeValue: 1
+  damage: 0
   level: 1
   IsAttacking: 0
 --- !u!212 &460616422
@@ -4877,7 +4868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &591013961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5956,7 +5947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &726572814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9899,8 +9890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 25
-  damage: 25
+  upgradeValue: 1
+  damage: 0
   level: 1
   IsAttacking: 0
 --- !u!212 &1180745664
@@ -12540,7 +12531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1644985579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13531,6 +13522,7 @@ MonoBehaviour:
   - {fileID: 166780959}
   - {fileID: 1180745661}
   EnemyPosition: {fileID: 967303835}
+  coinObject: {fileID: 0}
 --- !u!4 &1800116050
 Transform:
   m_ObjectHideFlags: 0
@@ -13974,7 +13966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1871761598
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16164,7 +16156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeValue: 1
-  damage: 1
+  damage: 0
   level: 1
   IsAttacking: 0
 --- !u!1001 &5888090067560880148

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    int level = 1;
+    public int level = 0;
+    public int hp = 0;
     
+    public void damaged(int damage)
+    {
+        hp -= damage;
+    }
 }

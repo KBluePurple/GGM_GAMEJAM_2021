@@ -5,9 +5,9 @@ using UnityEngine;
 public class GraphicCard : MonoBehaviour
 {
     [SerializeField]
-    float upgradeValue = 1;
-    [SerializeField]
-    float damage = 0;
+    int upgradeValue = 1;
+    
+    public int damage = 0;
 
     public int level = 1;
 

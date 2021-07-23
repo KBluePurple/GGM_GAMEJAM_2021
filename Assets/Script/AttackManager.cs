@@ -9,6 +9,9 @@ public class AttackManager : MonoBehaviour
     GameObject[] GraphicCards;
     [SerializeField]
     Transform EnemyPosition;
+    [SerializeField]
+    CoinScript coinObject;
+
     int clickCount = 0;
 
     GameManager gameManager;
@@ -43,6 +46,12 @@ public class AttackManager : MonoBehaviour
                 idleCard[selectedCard].GetComponent<GraphicCard>().IsAttacking = true;
 
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(EnemyPosition.position, 0.1f));
+
+                DOSequence.AppendCallback(() =>
+                {
+                    coinObject.damaged(idleCard[selectedCard].GetComponent<GraphicCard>().damage);
+                });
+
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(new Vector3(0, 0, 0) + idleCard[selectedCard].transform.parent.position, 0.1f));
                 Camera.main.GetComponent<ShakeCamera>().VibrateForTime(0.1f);
 

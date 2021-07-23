@@ -51,7 +51,8 @@ public class GameManager : MonoBehaviour
         switch (type)
         {
             case 0:
-
+                CoinObject.GetComponent<CoinScript>().hp = 1;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 1:
 
