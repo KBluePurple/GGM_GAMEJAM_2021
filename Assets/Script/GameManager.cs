@@ -24,8 +24,12 @@ public class GameManager : MonoBehaviour
 
     public bool battleing = false;
 
+    UIManager uIManager;
+
     void Start()
     {
+        uIManager = FindObjectOfType<UIManager>();
+        uIManager.UpdateUI();
         menuPos = menus.transform.position;
         CoinObject.GetComponent<SpriteRenderer>().material.DOFade(0, 0.0f);
 
