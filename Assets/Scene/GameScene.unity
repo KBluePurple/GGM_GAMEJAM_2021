@@ -1172,7 +1172,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 110697225}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820824294}
+        m_TargetAssemblyTypeName: ReinforceUIManager, Assembly-CSharp
+        m_MethodName: LevelUpCheck2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &110697225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3179,11 +3191,11 @@ MonoBehaviour:
   MoneyText: {fileID: 66097000}
   MoneyText2: {fileID: 2113352416}
   UpgradeValues:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1047535440}
+  - {fileID: 1283486666}
+  - {fileID: 703563727}
+  - {fileID: 1869398650}
+  - {fileID: 1160474529}
 --- !u!1 &314413782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,7 +4672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 468143274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820824294}
+        m_TargetAssemblyTypeName: ReinforceUIManager, Assembly-CSharp
+        m_MethodName: LevelUpCheck3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &468143274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5847,7 +5871,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 607301464}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820824294}
+        m_TargetAssemblyTypeName: ReinforceUIManager, Assembly-CSharp
+        m_MethodName: LevelUpCheck1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &607301464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8403,6 +8439,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819362938}
   m_CullTransparentMesh: 1
+--- !u!1 &820824292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820824293}
+  - component: {fileID: 820824294}
+  m_Layer: 0
+  m_Name: ReinforceUIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &820824293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820824292}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090677570}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820824294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820824292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a20f6695aeb72546afc4a170d79bd56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GraphicCards:
+  - {fileID: 4743856797132180318}
+  - {fileID: 457097295}
+  - {fileID: 166780961}
+  - {fileID: 460616421}
+  - {fileID: 1180745663}
+  reinforcecost:
+  - 1
+  - 50
+  - 100
+  - 100
+  - 250
+  - 300
+  - 400
+  - 500
+  - 600
+  - 800
+  - 1000
 --- !u!1 &833292063
 GameObject:
   m_ObjectHideFlags: 0
@@ -10926,6 +11023,8 @@ Transform:
   - {fileID: 256124380}
   - {fileID: 1584799690}
   - {fileID: 311972644}
+  - {fileID: 1682635657}
+  - {fileID: 820824293}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11206,7 +11305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1144619680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820824294}
+        m_TargetAssemblyTypeName: ReinforceUIManager, Assembly-CSharp
+        m_MethodName: LevelUpCheck5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1144619680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11327,7 +11438,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1149790449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 820824294}
+        m_TargetAssemblyTypeName: ReinforceUIManager, Assembly-CSharp
+        m_MethodName: LevelUpCheck4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1149790449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13953,10 +14076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9254d197a2abfe940a3c2d00a5f64513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reinforceErrorbtn: {fileID: 607301463}
   reinforceError: {fileID: 726572814}
   reinforceErrorBackturnbtn: {fileID: 1756195362}
-  cvsGroup: {fileID: 0}
 --- !u!4 &1584799690
 Transform:
   m_ObjectHideFlags: 0
@@ -14748,6 +14869,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673649740}
   m_CullTransparentMesh: 1
+--- !u!1 &1682635656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1682635657}
+  - component: {fileID: 1682635658}
+  m_Layer: 0
+  m_Name: MoneyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1682635657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682635656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090677570}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682635658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682635656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab4e29ec27d0434f82649d012f05826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debt: 250000
+  money: 10000
 --- !u!1 &1686710077
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,5 +30,6 @@ public class MoneyManager : MonoBehaviour
         if (PlayerPrefs.HasKey("Money"))
             return;
         money = PlayerPrefs.GetInt("Money");
+        money = 10000;
     }
 }
