@@ -10,7 +10,7 @@ public class AttackManager : MonoBehaviour
     [SerializeField]
     Transform EnemyPosition;
     [SerializeField]
-    CoinScript coinObject;
+    GameObject coinObject;
 
     int clickCount = 0;
 
@@ -47,18 +47,21 @@ public class AttackManager : MonoBehaviour
 
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(EnemyPosition.position, 0.1f));
 
+                Debug.Log(idleCard[selectedCard]);
+                Debug.Log(idleCard[selectedCard].GetComponent<GraphicCard>().damage);
+                Debug.Log(coinObject);
+
                 DOSequence.AppendCallback(() =>
                 {
-                    coinObject.damaged(idleCard[selectedCard].GetComponent<GraphicCard>().damage);
+                    coinObject.GetComponent<CoinScript>().damaged(idleCard[selectedCard].GetComponent<GraphicCard>().damage);
                 });
 
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(new Vector3(0, 0, 0) + idleCard[selectedCard].transform.parent.position, 0.1f));
-                Camera.main.GetComponent<ShakeCamera>().VibrateForTime(0.1f);
+                Camera.main.GetComponent<ShakeCamera>().VibrateForTime(0.2f);
 
                 DOSequence.InsertCallback(0.2f, () =>
                 {
                     idleCard[selectedCard].GetComponent<GraphicCard>().IsAttacking = false;
-                    DOSequence.Kill();
                 });
             }
             clickCount--;
