@@ -11,10 +11,17 @@ public class AttackManager : MonoBehaviour
     Transform EnemyPosition;
     int clickCount = 0;
 
+    GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     public void Attack()
     {
-        clickCount++;
+        if (gameManager.battleing)
+            clickCount++;
     }
 
     private void Update()
