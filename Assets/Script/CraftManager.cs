@@ -6,6 +6,9 @@ public class CraftManager : MonoBehaviour
 {
     InvManager invManager = null;
 
+    MakingPopManager MakingPopManager = null;
+
+
     public void Craft1()
     {
         Craft(0);
@@ -29,6 +32,12 @@ public class CraftManager : MonoBehaviour
     void Start()
     {
         invManager = FindObjectOfType<InvManager>();
+        MakingPopManager = FindObjectOfType<MakingPopManager>();
+    }
+
+    void FaildUpgrade()
+    {
+        MakingPopManager.ReinforceError();
     }
 
     bool Craft(int card)
@@ -41,12 +50,20 @@ public class CraftManager : MonoBehaviour
                     invManager.AddCard(0);
                     return true;
                 }
+                else
+                {
+                    FaildUpgrade();
+                }
                 break;
             case 1:
                 if (invManager.CheckItem(2) && invManager.CheckItem(3))
                 {
                     invManager.AddCard(1);
                     return true;
+                }
+                else
+                {
+                    FaildUpgrade();
                 }
                 break;
             case 2:
@@ -55,12 +72,20 @@ public class CraftManager : MonoBehaviour
                     invManager.AddCard(2);
                     return true;
                 }
+                else
+                {
+                    FaildUpgrade();
+                }
                 break;
             case 3:
                 if (invManager.CheckItem(7) && invManager.CheckItem(8) && invManager.CheckItem(9))
                 {
                     invManager.AddCard(3);
                     return true;
+                }
+                else
+                {
+                    FaildUpgrade();
                 }
                 break;
         }

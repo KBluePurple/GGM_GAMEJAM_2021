@@ -1282,7 +1282,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e629539980341a24aba30732b99bd6bb, type: 3}
-    m_FontSize: 180
+    m_FontSize: 140
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1293,7 +1293,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB3C8\uC774 \n\uBD80\uC871\uD569\uB2C8\uB2E4."
+  m_Text: "\uB3C8\uC774 \n\uBD80\uC871\uD558\uAC70\uB098\n\uAC15\uD654\uAC00 \uCD5C\uB300\uB85C
+    \uB418\uC5C8\uC2B5\uB2C8\uB2E4."
 --- !u!222 &111264936
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11025,6 +11026,7 @@ Transform:
   - {fileID: 311972644}
   - {fileID: 1682635657}
   - {fileID: 820824293}
+  - {fileID: 1680663071}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14869,6 +14871,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673649740}
   m_CullTransparentMesh: 1
+--- !u!1 &1680663070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680663071}
+  - component: {fileID: 1680663072}
+  m_Layer: 0
+  m_Name: MakingPopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680663071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680663070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1090677570}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680663072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680663070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fe431781d438047a89adfd99bc0e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reinforceError: {fileID: 1644985579}
+  reinforceErrorBackturnbtn: {fileID: 886487876}
 --- !u!1 &1682635656
 GameObject:
   m_ObjectHideFlags: 0
