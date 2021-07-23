@@ -43,11 +43,10 @@ public class AttackManager : MonoBehaviour
                 idleCard[selectedCard].GetComponent<GraphicCard>().IsAttacking = true;
 
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(EnemyPosition.position, 0.1f));
-                DOSequence.AppendInterval(0.1f);
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(new Vector3(0, 0, 0) + idleCard[selectedCard].transform.parent.position, 0.1f));
                 Camera.main.GetComponent<ShakeCamera>().VibrateForTime(0.1f);
 
-                DOSequence.InsertCallback(0.3f, () =>
+                DOSequence.InsertCallback(0.2f, () =>
                 {
                     idleCard[selectedCard].GetComponent<GraphicCard>().IsAttacking = false;
                     DOSequence.Kill();
