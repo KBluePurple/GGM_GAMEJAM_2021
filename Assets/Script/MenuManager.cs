@@ -8,7 +8,14 @@ public class MenuManager : MonoBehaviour
     GameObject[] Menus;
 
     int CurrentMenu = 0;
-    
+
+    private void Start()
+    {
+        for(int i = 0; i < Menus.Length; i++)
+            Menus[i].SetActive(false);
+        Menus[CurrentMenu].SetActive(true);
+    }
+
     public void ChangeMenu1()
     {
         Menus[CurrentMenu].SetActive(false);
