@@ -13,6 +13,8 @@ public class GraphicCard : MonoBehaviour
 
     public bool IsAttacking = false;
 
+    public bool IsUnlocked = false;
+
     public void levelUp()
     {
         level++;

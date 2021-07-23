@@ -5,6 +5,7 @@ using DG.Tweening;
 
 public class CoinScript : MonoBehaviour
 {
+    public int type = 0;
     public int level = 0;
     public int hp = 0;
     public int money = 0;
