@@ -35,7 +35,7 @@ public class AttackManager : MonoBehaviour
 
             for (int i = 0; i < GraphicCards.Length; i++)
             {
-                if (!GraphicCards[i].GetComponent<GraphicCard>().IsAttacking || GraphicCards[i].GetComponent<GraphicCard>().IsUnlocked)
+                if (!GraphicCards[i].GetComponent<GraphicCard>().IsAttacking && GraphicCards[i].GetComponent<GraphicCard>().IsUnlocked)
                     idleCard.Add(GraphicCards[i]);
             }
 
