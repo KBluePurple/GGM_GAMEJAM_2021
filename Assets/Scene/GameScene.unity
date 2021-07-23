@@ -931,8 +931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 1
-  damage: 0
+  upgradeValue: 5
+  damage: 5
   level: 1
   IsAttacking: 0
 --- !u!212 &166780962
@@ -3273,8 +3273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 1
-  damage: 0
+  upgradeValue: 2.5
+  damage: 2.5
   level: 1
   IsAttacking: 0
 --- !u!212 &457097296
@@ -3372,8 +3372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 1
-  damage: 0
+  upgradeValue: 10
+  damage: 10
   level: 1
   IsAttacking: 0
 --- !u!212 &460616422
@@ -8577,8 +8577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0a519bada7f284b9328c5792e9f051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeValue: 1
-  damage: 0
+  upgradeValue: 25
+  damage: 25
   level: 1
   IsAttacking: 0
 --- !u!212 &1180745664
@@ -14082,7 +14082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeValue: 1
-  damage: 0
+  damage: 1
   level: 1
   IsAttacking: 0
 --- !u!1001 &5888090067560880148
