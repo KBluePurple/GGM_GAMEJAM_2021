@@ -55,35 +55,44 @@ public class GameManager : MonoBehaviour
         switch (type)
         {
             case 0:
-                CoinObject.GetComponent<CoinScript>().hp = 1;
+                CoinObject.GetComponent<CoinScript>().hp = 10;
                 CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 1:
-
+                CoinObject.GetComponent<CoinScript>().hp = 50;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 2:
-
+                CoinObject.GetComponent<CoinScript>().hp = 100;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 3:
-
+                CoinObject.GetComponent<CoinScript>().hp = 250;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 4:
-
+                CoinObject.GetComponent<CoinScript>().hp = 300;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 5:
-
+                CoinObject.GetComponent<CoinScript>().hp = 400;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 6:
-
+                CoinObject.GetComponent<CoinScript>().hp = 500;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 7:
-
+                CoinObject.GetComponent<CoinScript>().hp = 600;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 8:
-
+                CoinObject.GetComponent<CoinScript>().hp = 800;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
             case 9:
-
+                CoinObject.GetComponent<CoinScript>().hp = 1000;
+                CoinObject.GetComponent<CoinScript>().level = 1;
                 break;
         }
 

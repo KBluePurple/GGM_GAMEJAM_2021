@@ -13,16 +13,20 @@ public class ReinforceUIManager : MonoBehaviour
     MoneyManager moneyManager = null;
 
     PopManager popManager = null;
+
+    AudioManager audioManager = null;
     void Start()
     {
         uIManager = FindObjectOfType<UIManager>();
         moneyManager = FindObjectOfType<MoneyManager>();
         popManager = FindObjectOfType<PopManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void FaildUpgrade()
     {
         popManager.ReinforceError();
+        audioManager.PlaySound("FALSE");
     }
 
     public void LevelUpCheck1()
@@ -35,6 +39,7 @@ public class ReinforceUIManager : MonoBehaviour
         moneyManager.money -= GraphicCards[0].level * 100;
         GraphicCards[0].levelUp();
         reinforcecost[0] *= 100;
+        audioManager.PlaySound("CHOOSE");
         uIManager.UpdateUI();
     }
 
@@ -48,6 +53,7 @@ public class ReinforceUIManager : MonoBehaviour
         moneyManager.money -= GraphicCards[1].level * 500;
         GraphicCards[1].levelUp();
         reinforcecost[1] *= 500;
+        audioManager.PlaySound("CHOOSE");
         uIManager.UpdateUI();
     }
     public void LevelUpCheck3()
@@ -60,6 +66,7 @@ public class ReinforceUIManager : MonoBehaviour
         moneyManager.money -= GraphicCards[2].level * 1000;
         GraphicCards[2].levelUp();
         reinforcecost[2] *= 1000;
+        audioManager.PlaySound("CHOOSE");
         uIManager.UpdateUI();
     }
     public void LevelUpCheck4()
@@ -72,6 +79,7 @@ public class ReinforceUIManager : MonoBehaviour
         moneyManager.money -= GraphicCards[3].level * 2500;
         GraphicCards[3].levelUp();
         reinforcecost[3] *= 2500;
+        audioManager.PlaySound("CHOOSE");
         uIManager.UpdateUI();
     }
     public void LevelUpCheck5()
@@ -84,6 +92,7 @@ public class ReinforceUIManager : MonoBehaviour
         moneyManager.money -= GraphicCards[4].level * 5000;
         GraphicCards[4].levelUp();
         reinforcecost[4] *= 5000;
+        audioManager.PlaySound("CHOOSE");
         uIManager.UpdateUI();
     }
 }

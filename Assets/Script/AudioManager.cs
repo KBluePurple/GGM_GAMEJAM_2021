@@ -11,12 +11,12 @@ public class AudioManager : MonoBehaviour
 
     AudioSource audioSource;
 
-    private void Awake()
+    public void Awake()
     {
         this.audioSource = GetComponent<AudioSource>();
     }
 
-    void PlaySound(string action)
+    public void PlaySound(string action)
     {
         switch (action)
         {
@@ -35,4 +35,5 @@ public class AudioManager : MonoBehaviour
         }
         audioSource.Play();
     }
+
 }
