@@ -17288,7 +17288,7 @@ MonoBehaviour:
   - {fileID: 166780959}
   - {fileID: 1180745661}
   EnemyPosition: {fileID: 967303835}
-  coinObject: {fileID: 0}
+  coinObject: {fileID: 1399127894}
 --- !u!4 &1800116050
 Transform:
   m_ObjectHideFlags: 0

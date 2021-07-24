@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnenyManager : MonoBehaviour
 {
     public double enemyLevel = 1;
-    double[] enemyHp = new double[] { 1, 50, 100, 250, 300, 400, 500, 600, 800, 1000};
+    double[] enemyHp = new double[] { 10, 50, 100, 250, 300, 400, 500, 600, 800, 1000};
 
     public void BiteHpCheck()
     {

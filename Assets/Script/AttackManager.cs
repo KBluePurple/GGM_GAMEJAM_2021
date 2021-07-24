@@ -9,7 +9,7 @@ public class AttackManager : MonoBehaviour
     [SerializeField]
     Transform EnemyPosition;
     [SerializeField]
-    GameObject coinObject;
+    GameObject coinObject = null;
 
     int clickCount = 0;
 
@@ -45,10 +45,6 @@ public class AttackManager : MonoBehaviour
                 idleCard[selectedCard].GetComponent<GraphicCard>().IsAttacking = true;
 
                 DOSequence.Append(idleCard[selectedCard].transform.DOMove(EnemyPosition.position, 0.1f));
-
-                Debug.Log(idleCard[selectedCard]);
-                Debug.Log(idleCard[selectedCard].GetComponent<GraphicCard>().damage);
-                Debug.Log(coinObject);
 
                 DOSequence.AppendCallback(() =>
                 {

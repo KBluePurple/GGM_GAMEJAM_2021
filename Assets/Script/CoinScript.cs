@@ -11,6 +11,11 @@ public class CoinScript : MonoBehaviour
     public int money = 0;
 
     GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
     
     public void damaged(int damage)
     {
