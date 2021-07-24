@@ -8,7 +8,7 @@ public class CraftManager : MonoBehaviour
 
     MakingPopManager MakingPopManager = null;
 
-
+    AudioManager audioManager = null;
     public void Craft1()
     {
         Craft(0);
@@ -33,11 +33,13 @@ public class CraftManager : MonoBehaviour
     {
         invManager = FindObjectOfType<InvManager>();
         MakingPopManager = FindObjectOfType<MakingPopManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void FaildUpgrade()
     {
         MakingPopManager.ReinforceError();
+        audioManager.PlaySound("FALSE");
     }
 
     bool Craft(int card)
