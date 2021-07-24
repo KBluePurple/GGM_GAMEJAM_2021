@@ -14,17 +14,23 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     Text[] UpgradeValues;
 
+    [SerializeField]
+    Text BossLevel;
+
     MoneyManager moneyManager;
 
     ReinforceUIManager reinforceUIManager;
 
     UIManager uIManager;
 
+    GameManager gameManager;
+
     void Start()
     {
         uIManager = FindObjectOfType<UIManager>();
         moneyManager = FindObjectOfType<MoneyManager>();
         reinforceUIManager = FindObjectOfType<ReinforceUIManager>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     public void UpdateUI()
@@ -37,6 +43,8 @@ public class UIManager : MonoBehaviour
         UpgradeValues[2].text = string.Format("{0}₩", reinforceUIManager.GraphicCards[2].level * 1000);
         UpgradeValues[3].text = string.Format("{0}₩", reinforceUIManager.GraphicCards[3].level * 2500);
         UpgradeValues[4].text = string.Format("{0}₩", reinforceUIManager.GraphicCards[4].level * 5000);
+
+        BossLevel.text = string.Format("보스레벨 : {0}", gameManager.level);
     }
 
     public void CloseReinforcePopup()

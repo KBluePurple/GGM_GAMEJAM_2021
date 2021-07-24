@@ -2667,7 +2667,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 233089507}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &233089507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3544,6 +3556,7 @@ MonoBehaviour:
   - {fileID: 703563727}
   - {fileID: 1869398650}
   - {fileID: 1160474529}
+  BossLevel: {fileID: 193213323}
 --- !u!1 &314413782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,7 +4322,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 380132655}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle6
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &380132655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4634,7 +4659,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416375319}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &416375319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4755,7 +4792,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 452084010}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle7
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &452084010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5157,21 +5206,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
-  buttons:
-  - {fileID: 1777374694}
-  - {fileID: 233089506}
-  - {fileID: 1615926078}
-  - {fileID: 958330270}
-  - {fileID: 416375318}
-  - {fileID: 380132654}
-  - {fileID: 452084009}
-  - {fileID: 642797814}
-  - {fileID: 1006493765}
-  - {fileID: 1790881345}
   menus: {fileID: 632286722}
   GraphicCards: {fileID: 341605834}
   CoinObject: {fileID: 1399127894}
+  CoinImages:
+  - {fileID: 21300000, guid: ce629eacd79017c439c4b35cc1faf7b9, type: 3}
+  - {fileID: 21300000, guid: 55f0bfff492010246aaa2d77564d1e2f, type: 3}
+  - {fileID: 21300000, guid: c2055932f4be2cf4ea01f204fb5553f8, type: 3}
+  - {fileID: 21300000, guid: 333fa50ffbd7a0c49b00e757a3057f89, type: 3}
+  - {fileID: 21300000, guid: 565b2c59fbfc4974cb4f234a80bad11d, type: 3}
+  - {fileID: 21300000, guid: 83f170f0fce0c0248b8a5bd8a6e049c5, type: 3}
+  - {fileID: 21300000, guid: a726d3163c6f5b144b03dc730839750f, type: 3}
+  - {fileID: 21300000, guid: c728b8045cbc44249b22302d2be4ff05, type: 3}
+  - {fileID: 21300000, guid: b2c1c1e5ac8718f48a1001a0482f8f62, type: 3}
+  - {fileID: 21300000, guid: faba2fbae62b668499048abce9454a70, type: 3}
   battleing: 0
+  level: 1
 --- !u!4 &477459056
 Transform:
   m_ObjectHideFlags: 0
@@ -6540,7 +6590,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642797815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle8
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &642797815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9983,7 +10045,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 915043146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584799689}
+        m_TargetAssemblyTypeName: PopManager, Assembly-CSharp
+        m_MethodName: OpenSettingPopupF
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &915043146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10190,7 +10264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 942101969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: addLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &942101969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10522,7 +10608,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 958330271}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &958330271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10958,7 +11056,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1006493766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle9
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1006493766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15099,6 +15209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reinforceError: {fileID: 726572814}
   reinforceErrorBackturnbtn: {fileID: 1756195362}
+  SettingPopup: {fileID: 1871761598}
+  CloseSettingPopup: {fileID: 1402925379}
 --- !u!4 &1584799690
 Transform:
   m_ObjectHideFlags: 0
@@ -15385,7 +15497,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1615926079}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1615926079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16153,7 +16277,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1686710080}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: minusLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1686710080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17017,7 +17153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1777374695}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1777374695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17138,7 +17286,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1790881346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477459055}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StartBattle10
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1790881346
 MonoBehaviour:
   m_ObjectHideFlags: 0

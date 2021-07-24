@@ -10,10 +10,12 @@ public class CoinScript : MonoBehaviour
     public int hp = 0;
     public int money = 0;
 
+    MoneyManager moneyManager;
     GameManager gameManager;
 
     void Start()
     {
+        moneyManager = FindObjectOfType<MoneyManager>();
         gameManager = FindObjectOfType<GameManager>();
     }
     
@@ -35,7 +37,7 @@ public class CoinScript : MonoBehaviour
         DOSequence.AppendInterval(1f);
         DOSequence.AppendCallback(() =>
         {
-            gameManager.money += money;
+            moneyManager.money += money;
             gameManager.ExitButton();
         });
     }

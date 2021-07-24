@@ -13,12 +13,16 @@ public class PopManager : MonoBehaviour
 
     public Button reinforceErrorBackturnbtn;
 
+    public Transform SettingPopup;
+
+    public Button CloseSettingPopup;
+
     void Start()
     {
         reinforceErrorBackturnbtn.onClick.AddListener(ReinforceErrorBackturn);
         reinforceError.localScale = Vector3.zero;
-
-        
+        CloseSettingPopup.onClick.AddListener(CloseSettingPopupF);
+        SettingPopup.localScale = Vector3.zero;
     }
 
     public void ReinforceError()
@@ -27,48 +31,23 @@ public class PopManager : MonoBehaviour
         Sequence seq = DOTween.Sequence();
         seq.Append(reinforceError.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.2f));
         seq.Append(reinforceError.DOScale(new Vector3(1f, 1f, 1f), 0.1f));
-
-        //DOTween.To(겟터, 셋터, 최종값, 기간);
-        ///DOTween.To(() => cvsGroup.alpha, v => cvsGroup.alpha = v, 1, 2.5f);
     }
 
     public void ReinforceErrorBackturn()
     {
-        Sequence seq = DOTween.Sequence();
-        seq.Append(reinforceError.DOScale(new Vector3(0f, 0f, 0f), 0.2f));
+        reinforceError.DOScale(new Vector3(0f, 0f, 0f), 0.2f);
     }
 
-    
-
-
-    /*
-     public Transform makingError;
-
-    public Button makingBackturnbtn;
-
-
-
-
-    makingBackturnbtn.onClick.AddListener(makingBackturn);
-        makingError.localScale = Vector3.zero;
-
-
-
-    public void makingError()
+    public void OpenSettingPopupF()
     {
-        makingError.gameObject.SetActive(true);
+        SettingPopup.gameObject.SetActive(true);
         Sequence seq = DOTween.Sequence();
-        seq.Append(makingError.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.2f));
-        seq.Append(makingError.DOScale(new Vector3(1f, 1f, 1f), 0.1f));
-
-        //DOTween.To(겟터, 셋터, 최종값, 기간);
-        ///DOTween.To(() => cvsGroup.alpha, v => cvsGroup.alpha = v, 1, 2.5f);
+        seq.Append(SettingPopup.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.2f));
+        seq.Append(SettingPopup.DOScale(new Vector3(1f, 1f, 1f), 0.1f));
     }
 
-    public void makingBackturn()
+    public void CloseSettingPopupF()
     {
-        Sequence seq = DOTween.Sequence();
-        seq.Append(makingError.DOScale(new Vector3(0f, 0f, 0f), 0.2f));
+        SettingPopup.DOScale(new Vector3(0f, 0f, 0f), 0.2f);
     }
-    */
 }

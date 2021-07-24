@@ -9,9 +9,6 @@ public class GameManager : MonoBehaviour
     public int money = 0;
 
     [SerializeField]
-    Button[] buttons;
-
-    [SerializeField]
     GameObject menus;
 
     [SerializeField]
@@ -20,11 +17,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject CoinObject;
 
+    [SerializeField]
+    Sprite[] CoinImages;
+
     Vector2 menuPos;
 
     public bool battleing = false;
 
     UIManager uIManager;
+
+    public int level = 1;
 
     void Start()
     {
@@ -32,18 +34,68 @@ public class GameManager : MonoBehaviour
         uIManager.UpdateUI();
         menuPos = menus.transform.position;
         CoinObject.GetComponent<SpriteRenderer>().material.DOFade(0, 0.0f);
+    }
 
-        for (int i = 0; i < 10; i++)
-        {
-            buttons[i].onClick.AddListener(() =>
-            {
-                StartBattle(i);
-            });
-        }
+    public void StartBattle1()
+    {
+        StartBattle(0);
+    }
+    public void StartBattle2()
+    {
+        StartBattle(1);
+    }
+    public void StartBattle3()
+    {
+        StartBattle(2);
+    }
+    public void StartBattle4()
+    {
+        StartBattle(3);
+    }
+    public void StartBattle5()
+    {
+        StartBattle(4);
+    }
+    public void StartBattle6()
+    {
+        StartBattle(5);
+    }
+    public void StartBattle7()
+    {
+        StartBattle(6);
+    }
+    public void StartBattle8()
+    {
+        StartBattle(7);
+    }
+    public void StartBattle9()
+    {
+        StartBattle(8);
+    }
+    public void StartBattle10()
+    {
+        StartBattle(9);
+    }
+
+
+    public void addLevel()
+    {
+        if (level >= 10) return;
+        level++;
+        uIManager.UpdateUI();
+    }
+
+    public void minusLevel()
+    {
+        if (level <= 1) return;
+        level--;
+        uIManager.UpdateUI();
     }
 
     public void StartBattle(int type)
     {
+        Debug.Log(type);
+        Debug.Log(level);
         if (battleing) return;
         Sequence DOSequence = DOTween.Sequence();
         CoinObject.SetActive(true);
@@ -55,45 +107,67 @@ public class GameManager : MonoBehaviour
         switch (type)
         {
             case 0:
-                CoinObject.GetComponent<CoinScript>().hp = 10;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 10;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 50 + level * 25;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[0];
                 break;
             case 1:
-                CoinObject.GetComponent<CoinScript>().hp = 50;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 50;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 250 + level * 125;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[1];
                 break;
             case 2:
-                CoinObject.GetComponent<CoinScript>().hp = 100;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 100;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 500 + level * 250;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[2];
                 break;
             case 3:
-                CoinObject.GetComponent<CoinScript>().hp = 250;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 250;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 1250 + level * 625;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[3];
                 break;
             case 4:
-                CoinObject.GetComponent<CoinScript>().hp = 300;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 300;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 1500 + level * 750;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[4];
                 break;
             case 5:
-                CoinObject.GetComponent<CoinScript>().hp = 400;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 400;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 2000 + level * 1000;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[5];
                 break;
             case 6:
-                CoinObject.GetComponent<CoinScript>().hp = 500;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 500;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 2500 + level * 1250;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[6];
                 break;
             case 7:
-                CoinObject.GetComponent<CoinScript>().hp = 600;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 600;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 3000 + level * 1500;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[7];
                 break;
             case 8:
-                CoinObject.GetComponent<CoinScript>().hp = 800;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 800;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 4000 + level * 2000;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[8];
                 break;
             case 9:
-                CoinObject.GetComponent<CoinScript>().hp = 1000;
-                CoinObject.GetComponent<CoinScript>().level = 1;
+                CoinObject.GetComponent<CoinScript>().hp = level * 1000;
+                CoinObject.GetComponent<CoinScript>().level = level;
+                CoinObject.GetComponent<CoinScript>().money = 5000 + level * 5000;
+                CoinObject.GetComponent<SpriteRenderer>().sprite = CoinImages[9];
                 break;
+            default:
+                return;
         }
 
         DOSequence.AppendCallback(() =>
