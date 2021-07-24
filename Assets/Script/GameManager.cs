@@ -102,9 +102,11 @@ public class GameManager : MonoBehaviour
 
     public void StartBattle(int type)
     {
+
         Debug.Log(type);
         Debug.Log(level);
         if (battleing) return;
+        HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
         Sequence DOSequence = DOTween.Sequence();
         CoinObject.SetActive(true);
         Debug.Log(menuPos);
@@ -203,6 +205,7 @@ public class GameManager : MonoBehaviour
         {
             battleing = true;
             HealthBar.SetActive(true);
+
         });
     }
 

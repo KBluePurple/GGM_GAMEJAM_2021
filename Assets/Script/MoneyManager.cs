@@ -7,7 +7,8 @@ public class MoneyManager : MonoBehaviour
     public int debt = 250000;
     public int money = 0;
 
-    private void Start()
+
+    private void Awake()
     {
         LoadMoneyData();
     }
@@ -16,10 +17,10 @@ public class MoneyManager : MonoBehaviour
     {
         if (money <= 250000) return;
         money -= debt;
-
+        SaveMoneyData();
     }
 
-    public void SaveData()
+    public void SaveMoneyData()
     {
         PlayerPrefs.SetInt("Money", money);
         PlayerPrefs.Save();
@@ -27,9 +28,6 @@ public class MoneyManager : MonoBehaviour
 
     public void LoadMoneyData()
     {
-        if (PlayerPrefs.HasKey("Money"))
-            return;
-        money = PlayerPrefs.GetInt("Money");
-        money = 10000;
+        money = PlayerPrefs.GetInt("Money", 0);
     }
 }
