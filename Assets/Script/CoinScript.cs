@@ -50,7 +50,6 @@ public class CoinScript : MonoBehaviour
         {
             moneyManager.money += money;
             int random = Random.Range(0, 100);
-            Debug.Log(random);
             if (random >= 20)
                 invManager.AddItem(type);
             uiManager.UpdateUI();
