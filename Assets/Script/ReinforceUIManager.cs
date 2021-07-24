@@ -40,6 +40,7 @@ public class ReinforceUIManager : MonoBehaviour
         GraphicCards[0].levelUp();
         reinforcecost[0] *= 100;
         audioManager.PlaySound("CHOOSE");
+        moneyManager.SaveMoneyData();
         uIManager.UpdateUI();
     }
 
@@ -54,6 +55,7 @@ public class ReinforceUIManager : MonoBehaviour
         GraphicCards[1].levelUp();
         reinforcecost[1] *= 500;
         audioManager.PlaySound("CHOOSE");
+        moneyManager.SaveMoneyData();
         uIManager.UpdateUI();
     }
     public void LevelUpCheck3()
@@ -67,6 +69,7 @@ public class ReinforceUIManager : MonoBehaviour
         GraphicCards[2].levelUp();
         reinforcecost[2] *= 1000;
         audioManager.PlaySound("CHOOSE");
+        moneyManager.SaveMoneyData();
         uIManager.UpdateUI();
     }
     public void LevelUpCheck4()
@@ -80,6 +83,7 @@ public class ReinforceUIManager : MonoBehaviour
         GraphicCards[3].levelUp();
         reinforcecost[3] *= 2500;
         audioManager.PlaySound("CHOOSE");
+        moneyManager.SaveMoneyData();
         uIManager.UpdateUI();
     }
     public void LevelUpCheck5()
@@ -93,6 +97,7 @@ public class ReinforceUIManager : MonoBehaviour
         GraphicCards[4].levelUp();
         reinforcecost[4] *= 5000;
         audioManager.PlaySound("CHOOSE");
+        moneyManager.SaveMoneyData();
         uIManager.UpdateUI();
     }
 }

@@ -15,6 +15,7 @@ public class CoinScript : MonoBehaviour
     GameManager gameManager;
     InvManager invManager;
     UIManager uiManager;
+    
 
     void Start()
     {
@@ -52,6 +53,8 @@ public class CoinScript : MonoBehaviour
             Debug.Log(random);
             if (random >= 20)
                 invManager.AddItem(type);
+            moneyManager.SaveMoneyData();
+            gameManager.HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
             uiManager.UpdateUI();
         });
     }

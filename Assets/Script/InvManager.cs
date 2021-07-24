@@ -28,6 +28,11 @@ public class InvManager : MonoBehaviour
         AddItem(1);
     }
 
+    private void Awake()
+    {
+        LoadItems();
+    }
+
     public void AddItem(int item)
     {
         inv[item] = true;
@@ -96,7 +101,7 @@ public class InvManager : MonoBehaviour
         }
 
         saveStr = PlayerPrefs.GetString("Items", "10000");
-        for (int i = 0; i < 5; i++)
+        for (int i = 1; i < 5; i++)
         {
             if (saveStr.ToCharArray()[i] == '1')
             {
