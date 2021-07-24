@@ -61,7 +61,7 @@ public class InvManager : MonoBehaviour
     }
 
     public void SaveItems()
-    {
+    {/*
         string saveStr = "";
         for (int i = 0; i < 10; i++)
         {
@@ -91,11 +91,11 @@ public class InvManager : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             PlayerPrefs.SetInt("CardUpgradeLevel" + i, reinforceUIManager.GraphicCards[i].level);
-        }
+        }*/
     }
 
     public void LoadItems()
-    {
+    {/*
         Debug.Log(PlayerPrefs.GetString("Items", "0000000000"));
         Debug.Log(PlayerPrefs.GetString("Cards", "10000"));
         string saveStr = PlayerPrefs.GetString("Items", "0000000000");
@@ -153,6 +153,6 @@ public class InvManager : MonoBehaviour
                         break;
                 }
             }
-        }
+        }*/
     }
 }

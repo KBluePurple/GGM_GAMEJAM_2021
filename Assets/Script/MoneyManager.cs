@@ -21,13 +21,13 @@ public class MoneyManager : MonoBehaviour
     }
 
     public void SaveMoneyData()
-    {
+    {/*
         PlayerPrefs.SetInt("Money", money);
-        PlayerPrefs.Save();
+        PlayerPrefs.Save();*/
     }
 
     public void LoadMoneyData()
     {
-        money = PlayerPrefs.GetInt("Money", 0);
+        money = 0;// PlayerPrefs.GetInt("Money", 0);
     }
 }
