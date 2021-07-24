@@ -15,9 +15,11 @@ public class AttackManager : MonoBehaviour
 
     GameManager gameManager;
 
+    AudioManager audioManager = null;
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void Attack()
@@ -32,6 +34,7 @@ public class AttackManager : MonoBehaviour
         {
             Sequence DOSequence = DOTween.Sequence();
             List<GameObject> idleCard = new List<GameObject>();
+            audioManager.PlaySound("ATTACK");
 
             for (int i = 0; i < GraphicCards.Length; i++)
             {
