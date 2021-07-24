@@ -34,8 +34,9 @@ public class CoinScript : MonoBehaviour
         hp -= damage;
         // 0 1000
         // 0 50
-        int n = 1000 / maxhp;
-        gameManager.HealthBar.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(hp * n, 100);
+        float n = 1000f / (float)maxhp;
+        Debug.Log(n);
+        gameManager.HealthBar.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2((float)hp * n, 100f);
     }
 
     void Death()
