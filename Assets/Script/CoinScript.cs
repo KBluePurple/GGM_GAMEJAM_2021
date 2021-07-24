@@ -51,12 +51,8 @@ public class CoinScript : MonoBehaviour
         {
             moneyManager.money += money;
             int random = Random.Range(0, 100);
-<<<<<<< HEAD
             Debug.Log(random);
             if (random <= 20)
-=======
-            if (random >= 20)
->>>>>>> 7668dfea12120cea7cffc347a706b1b31fdc6891
                 invManager.AddItem(type);
             moneyManager.SaveMoneyData();
             gameManager.HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
