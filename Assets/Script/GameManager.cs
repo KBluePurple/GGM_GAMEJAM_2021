@@ -218,6 +218,7 @@ public class GameManager : MonoBehaviour
 
             return;
         }
+        HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
         HealthBar.SetActive(false);
         Sequence DOSequence = DOTween.Sequence();
         DOSequence.Append(CoinObject.GetComponent<SpriteRenderer>().material.DOFade(0, 0.5f));
