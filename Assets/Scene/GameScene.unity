@@ -5177,6 +5177,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c728b8045cbc44249b22302d2be4ff05, type: 3}
   - {fileID: 21300000, guid: b2c1c1e5ac8718f48a1001a0482f8f62, type: 3}
   - {fileID: 21300000, guid: faba2fbae62b668499048abce9454a70, type: 3}
+  MainScene: {fileID: 674431798}
+  Webtoon: {fileID: 1465092173}
   battleing: 0
   level: 1
 --- !u!4 &477459056
@@ -14294,8 +14296,8 @@ MonoBehaviour:
   - {fileID: 2100294984}
   - {fileID: 149819140}
   - {fileID: 963173555}
-  - {fileID: 1839183355}
   - {fileID: 90232336}
+  - {fileID: 1839183355}
   CraftButtons:
   - {fileID: 529222039}
   - {fileID: 701597167}

@@ -22,6 +22,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Sprite[] CoinImages;
 
+    [SerializeField]
+    GameObject MainScene;
+
+    [SerializeField]
+    GameObject Webtoon;
+
     Vector2 menuPos;
 
     public bool battleing = false;
@@ -202,7 +208,13 @@ public class GameManager : MonoBehaviour
 
     public void ExitButton()
     {
-        if (!battleing) return;
+        if (!battleing)
+        {
+            MainScene.SetActive(true);
+            Webtoon.SetActive(true);
+
+            return;
+        }
         HealthBar.SetActive(false);
         Sequence DOSequence = DOTween.Sequence();
         DOSequence.Append(CoinObject.GetComponent<SpriteRenderer>().material.DOFade(0, 0.5f));
