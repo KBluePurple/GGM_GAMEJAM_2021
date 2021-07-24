@@ -24,20 +24,19 @@ public class InvManager : MonoBehaviour
 
     void Start()
     {
+        //PlayerPrefs.DeleteAll();
         attackManager = FindObjectOfType<AttackManager>();
         reinforceUIManager = FindObjectOfType<ReinforceUIManager>();
-
-    }
-
-    private void Awake()
-    {
         LoadItems();
+        AddItem(0);
+        AddItem(1);
     }
 
     public void AddItem(int item)
     {
         inv[item] = true;
         matetials[item].interactable = true;
+        SaveItems();
     }
 
     public bool CheckItem(int item)
@@ -53,6 +52,7 @@ public class InvManager : MonoBehaviour
         cardInv[card] = true;
         attackManager.GraphicCards[card].SetActive(true);
         attackManager.GraphicCards[card].GetComponent<GraphicCard>().IsUnlocked = true;
+        SaveItems();
     }
 
     public bool CheckCard(int card)
@@ -73,6 +73,7 @@ public class InvManager : MonoBehaviour
                 saveStr += "0";
         }
         PlayerPrefs.SetString("Items", saveStr);
+        Debug.Log(saveStr);
 
         saveStr = "";
         for (int i = 0; i < 5; i++)
@@ -85,6 +86,7 @@ public class InvManager : MonoBehaviour
                 saveStr += "0";
         }
         PlayerPrefs.SetString("Cards", saveStr);
+        Debug.Log(saveStr);
 
         for (int i = 0; i < 5; i++)
         {
@@ -94,6 +96,8 @@ public class InvManager : MonoBehaviour
 
     public void LoadItems()
     {
+        Debug.Log(PlayerPrefs.GetString("Items", "0000000000"));
+        Debug.Log(PlayerPrefs.GetString("Cards", "10000"));
         string saveStr = PlayerPrefs.GetString("Items", "0000000000");
         for (int i = 0; i < 10; i++)
         {
@@ -106,7 +110,7 @@ public class InvManager : MonoBehaviour
                 inv[i] = false;
         }
 
-        saveStr = PlayerPrefs.GetString("Items", "10000");
+        saveStr = PlayerPrefs.GetString("Cards", "10000");
         for (int i = 1; i < 5; i++)
         {
             if (saveStr.ToCharArray()[i] == '1')
