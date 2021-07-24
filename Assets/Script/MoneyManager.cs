@@ -28,8 +28,6 @@ public class MoneyManager : MonoBehaviour
 
     public void LoadMoneyData()
     {
-        if (PlayerPrefs.HasKey("Money"))
-            return;
         money = PlayerPrefs.GetInt("Money", 0);
     }
 }
