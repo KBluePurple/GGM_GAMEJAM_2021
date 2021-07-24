@@ -13068,7 +13068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioChoose: {fileID: 8300000, guid: 56ced16449bee844a888f8e5ecca475a, type: 3}
   audioFalse: {fileID: 8300000, guid: 4baa36b99f6a52d4b812115b0eee03d5, type: 3}
-  audioAttack: {fileID: 8300000, guid: 934b1c67936eb564784f608c2f206f01, type: 3}
+  audioAttack: {fileID: 8300000, guid: caaa8948dd554194da39e03aca90c191, type: 3}
   audioDie: {fileID: 8300000, guid: 04b56014a0367544cb0f72e4246b762a, type: 3}
 --- !u!82 &1228987596
 AudioSource:
