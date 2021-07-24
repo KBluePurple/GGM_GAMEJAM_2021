@@ -41,6 +41,7 @@ public class CoinScript : MonoBehaviour
 
     void Death()
     {
+        gameManager.HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
         gameManager.ExitButton();
         Sequence DOSequence = DOTween.Sequence();
         DOSequence.Append(gameObject.GetComponent<SpriteRenderer>().material.DOFade(0, 1));
