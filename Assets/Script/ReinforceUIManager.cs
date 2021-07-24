@@ -14,12 +14,15 @@ public class ReinforceUIManager : MonoBehaviour
     PopManager popManager = null;
 
     AudioManager audioManager = null;
+
+    InvManager invManager = null;
     void Start()
     {
         uIManager = FindObjectOfType<UIManager>();
         moneyManager = FindObjectOfType<MoneyManager>();
         popManager = FindObjectOfType<PopManager>();
         audioManager = FindObjectOfType<AudioManager>();
+        invManager = FindObjectOfType<InvManager>();
     }
 
     void FaildUpgrade()
@@ -40,6 +43,7 @@ public class ReinforceUIManager : MonoBehaviour
         reinforcecost[0] *= 100;
         audioManager.PlaySound("CHOOSE");
         moneyManager.SaveMoneyData();
+        invManager.SaveItems();
         uIManager.UpdateUI();
     }
 
@@ -55,6 +59,7 @@ public class ReinforceUIManager : MonoBehaviour
         reinforcecost[1] *= 500;
         audioManager.PlaySound("CHOOSE");
         moneyManager.SaveMoneyData();
+        invManager.SaveItems();
         uIManager.UpdateUI();
     }
     public void LevelUpCheck3()
@@ -69,6 +74,7 @@ public class ReinforceUIManager : MonoBehaviour
         reinforcecost[2] *= 1000;
         audioManager.PlaySound("CHOOSE");
         moneyManager.SaveMoneyData();
+        invManager.SaveItems();
         uIManager.UpdateUI();
     }
     public void LevelUpCheck4()
@@ -83,6 +89,7 @@ public class ReinforceUIManager : MonoBehaviour
         reinforcecost[3] *= 2500;
         audioManager.PlaySound("CHOOSE");
         moneyManager.SaveMoneyData();
+        invManager.SaveItems();
         uIManager.UpdateUI();
     }
     public void LevelUpCheck5()
@@ -97,6 +104,7 @@ public class ReinforceUIManager : MonoBehaviour
         reinforcecost[4] *= 5000;
         audioManager.PlaySound("CHOOSE");
         moneyManager.SaveMoneyData();
+        invManager.SaveItems();
         uIManager.UpdateUI();
     }
 }

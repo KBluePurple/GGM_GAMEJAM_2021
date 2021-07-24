@@ -26,8 +26,7 @@ public class InvManager : MonoBehaviour
     {
         attackManager = FindObjectOfType<AttackManager>();
         reinforceUIManager = FindObjectOfType<ReinforceUIManager>();
-        AddItem(0);
-        AddItem(1);
+
     }
 
     private void Awake()
@@ -112,7 +111,15 @@ public class InvManager : MonoBehaviour
         {
             if (saveStr.ToCharArray()[i] == '1')
             {
-                AddCard(i);
+                try
+                {
+                    AddCard(i);
+
+                }
+                catch
+                {
+
+                }
             }
             else
                 cardInv[i] = false;
