@@ -28,8 +28,8 @@ public class InvManager : MonoBehaviour
         attackManager = FindObjectOfType<AttackManager>();
         reinforceUIManager = FindObjectOfType<ReinforceUIManager>();
         LoadItems();
-        AddItem(0);
-        AddItem(1);
+        //AddItem(0);
+        //AddItem(1);
     }
 
     public void AddItem(int item)
