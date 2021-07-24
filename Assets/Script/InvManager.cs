@@ -13,6 +13,12 @@ public class InvManager : MonoBehaviour
     [SerializeField]
     Button[] matetials;
 
+    [SerializeField]
+    Button[] CraftButtons;
+
+    [SerializeField]
+    Button[] UpgradeButtons;
+
     public Button[] cards;
 
     void Start()
@@ -33,18 +39,19 @@ public class InvManager : MonoBehaviour
         return inv[item];
     }
 
-    public void AddCard(int item)
+    public void AddCard(int card)
     {
-        matetials[item].interactable = true;
-        item++;
-        cardInv[item] = true;
-        attackManager.GraphicCards[item].SetActive(true);
-        attackManager.GraphicCards[item].GetComponent<GraphicCard>().IsUnlocked = true;
+        CraftButtons[card].interactable = false;
+        UpgradeButtons[card].interactable = true;
+        card++;
+        cardInv[card] = true;
+        attackManager.GraphicCards[card].SetActive(true);
+        attackManager.GraphicCards[card].GetComponent<GraphicCard>().IsUnlocked = true;
     }
 
-    public bool CheckCard(int item)
+    public bool CheckCard(int card)
     {
-        return cardInv[item];
+        return cardInv[card];
     }
 
     public void SaveItems()

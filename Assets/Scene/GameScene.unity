@@ -1193,7 +1193,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 110697225}
   m_OnClick:
     m_PersistentCalls:
@@ -5077,7 +5077,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 468143274}
   m_OnClick:
     m_PersistentCalls:
@@ -12058,7 +12058,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1144619680}
   m_OnClick:
     m_PersistentCalls:
@@ -12191,7 +12191,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1149790449}
   m_OnClick:
     m_PersistentCalls:
@@ -14129,6 +14129,16 @@ MonoBehaviour:
   - {fileID: 963173555}
   - {fileID: 1839183355}
   - {fileID: 90232336}
+  CraftButtons:
+  - {fileID: 529222039}
+  - {fileID: 701597167}
+  - {fileID: 366335124}
+  - {fileID: 1763570032}
+  UpgradeButtons:
+  - {fileID: 110697224}
+  - {fileID: 468143273}
+  - {fileID: 1149790448}
+  - {fileID: 1144619679}
   cards:
   - {fileID: 529222039}
   - {fileID: 701597167}

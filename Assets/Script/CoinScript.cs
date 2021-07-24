@@ -12,11 +12,15 @@ public class CoinScript : MonoBehaviour
 
     MoneyManager moneyManager;
     GameManager gameManager;
+    InvManager invManager;
+    UIManager uiManager;
 
     void Start()
     {
         moneyManager = FindObjectOfType<MoneyManager>();
         gameManager = FindObjectOfType<GameManager>();
+        invManager = FindObjectOfType<InvManager>();
+        uiManager = FindObjectOfType<UIManager>();
     }
     
     public void damaged(int damage)
@@ -31,14 +35,18 @@ public class CoinScript : MonoBehaviour
 
     void Death()
     {
-
+        gameManager.ExitButton();
         Sequence DOSequence = DOTween.Sequence();
         DOSequence.Append(gameObject.GetComponent<SpriteRenderer>().material.DOFade(0, 1));
         DOSequence.AppendInterval(1f);
         DOSequence.AppendCallback(() =>
         {
             moneyManager.money += money;
-            gameManager.ExitButton();
+            int random = Random.Range(0, 100);
+            Debug.Log(random);
+            if (random >= 50)
+                invManager.AddItem(type);
+            uiManager.UpdateUI();
         });
     }
 }
