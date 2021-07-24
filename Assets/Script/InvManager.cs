@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InvManager : MonoBehaviour
 {
+    ReinforceUIManager reinforceUIManager = null;
     AttackManager attackManager = null;
 
     bool[] inv = new bool[10];
@@ -24,6 +25,7 @@ public class InvManager : MonoBehaviour
     void Start()
     {
         attackManager = FindObjectOfType<AttackManager>();
+        reinforceUIManager = FindObjectOfType<ReinforceUIManager>();
         AddItem(0);
         AddItem(1);
     }
@@ -84,6 +86,11 @@ public class InvManager : MonoBehaviour
                 saveStr += "0";
         }
         PlayerPrefs.SetString("Cards", saveStr);
+
+        for (int i = 0; i < 5; i++)
+        {
+            PlayerPrefs.SetInt("CardUpgradeLevel" + i, reinforceUIManager.GraphicCards[i].level);
+        }
     }
 
     public void LoadItems()
@@ -109,6 +116,32 @@ public class InvManager : MonoBehaviour
             }
             else
                 cardInv[i] = false;
+        }
+
+        for (int i = 0; i < 5; i++)
+        {
+            for (int j = 1; j < PlayerPrefs.GetInt("CardUpgradeLevel" + i, 0); j++)
+            {
+                reinforceUIManager.GraphicCards[i].levelUp();
+                switch (i)
+                {
+                    case 0:
+                        reinforceUIManager.reinforcecost[i] *= 100;
+                        break;
+                    case 1:
+                        reinforceUIManager.reinforcecost[i] *= 500;
+                        break;
+                    case 2:
+                        reinforceUIManager.reinforcecost[i] *= 1000;
+                        break;
+                    case 3:
+                        reinforceUIManager.reinforcecost[i] *= 2500;
+                        break;
+                    case 4:
+                        reinforceUIManager.reinforcecost[i] *= 5000;
+                        break;
+                }
+            }
         }
     }
 }

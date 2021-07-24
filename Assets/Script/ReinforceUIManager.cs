@@ -6,8 +6,7 @@ public class ReinforceUIManager : MonoBehaviour
 {
     public GraphicCard[] GraphicCards;
 
-    [SerializeField]
-    double[] reinforcecost = new double[] { 10, 50, 100, 100, 250, 300, 400, 500, 600, 800, 1000};
+    public double[] reinforcecost = new double[] { 10, 50, 100, 100, 250, 300, 400, 500, 600, 800, 1000};
     UIManager uIManager;
 
     MoneyManager moneyManager = null;
