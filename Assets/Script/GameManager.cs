@@ -199,12 +199,12 @@ public class GameManager : MonoBehaviour
             default:
                 return;
         }
-        HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
 
         DOSequence.AppendCallback(() =>
         {
             battleing = true;
             HealthBar.SetActive(true);
+            HealthBar.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
 
         });
     }
@@ -218,7 +218,7 @@ public class GameManager : MonoBehaviour
 
             return;
         }
-        HealthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
+        HealthBar.transform.GetChild(0).GetComponent<RectTransform>().sizeDelta = new Vector2(1000, 100);
         HealthBar.SetActive(false);
         Sequence DOSequence = DOTween.Sequence();
         DOSequence.Append(CoinObject.GetComponent<SpriteRenderer>().material.DOFade(0, 0.5f));

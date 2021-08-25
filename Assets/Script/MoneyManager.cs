@@ -6,10 +6,11 @@ public class MoneyManager : MonoBehaviour
 {
     public int debt = 250000;
     public int money = 0;
+    UIManager uIManager;
 
-
-    private void Awake()
+    private void Start()
     {
+        uIManager = FindObjectOfType<UIManager>();
         LoadMoneyData();
     }
 
@@ -21,13 +22,13 @@ public class MoneyManager : MonoBehaviour
     }
 
     public void SaveMoneyData()
-    {/*
+    {
         PlayerPrefs.SetInt("Money", money);
-        PlayerPrefs.Save();*/
     }
 
     public void LoadMoneyData()
     {
-        money = 0;// PlayerPrefs.GetInt("Money", 0);
+        PlayerPrefs.GetInt("Money", 0);
+        uIManager.UpdateUI();
     }
 }

@@ -5,43 +5,38 @@ using UnityEngine.UI;
 
 public class InvManager : MonoBehaviour
 {
-    ReinforceUIManager reinforceUIManager = null;
-    AttackManager attackManager = null;
-
-    bool[] inv = new bool[10];
-    bool[] cardInv = new bool[5];
-
     [SerializeField]
-    Button[] matetials;
-
+    Button[] materials;
     [SerializeField]
     Button[] CraftButtons;
-
     [SerializeField]
     Button[] UpgradeButtons;
-
+    ReinforceUIManager reinforceUIManager = null;
+    AttackManager attackManager = null;
+    public Inventory inventory;
     public Button[] cards;
+    UIManager uIManager;
 
     void Start()
     {
         //PlayerPrefs.DeleteAll();
+        uIManager = FindObjectOfType<UIManager>();
         attackManager = FindObjectOfType<AttackManager>();
         reinforceUIManager = FindObjectOfType<ReinforceUIManager>();
         LoadItems();
-        //AddItem(0);
-        //AddItem(1);
     }
 
     public void AddItem(int item)
     {
-        inv[item] = true;
-        matetials[item].interactable = true;
+        Debug.Log(item);
+        inventory.inv[item] = true;
+        materials[item].interactable = true;
         SaveItems();
     }
 
     public bool CheckItem(int item)
     {
-        return inv[item];
+        return inventory.inv[item];
     }
 
     public void AddCard(int card)
@@ -49,7 +44,7 @@ public class InvManager : MonoBehaviour
         CraftButtons[card].interactable = false;
         UpgradeButtons[card].interactable = true;
         card++;
-        cardInv[card] = true;
+        inventory.cardInv[card] = true;
         attackManager.GraphicCards[card].SetActive(true);
         attackManager.GraphicCards[card].GetComponent<GraphicCard>().IsUnlocked = true;
         SaveItems();
@@ -57,102 +52,70 @@ public class InvManager : MonoBehaviour
 
     public bool CheckCard(int card)
     {
-        return cardInv[card];
+        return inventory.cardInv[card];
     }
 
     public void SaveItems()
-    {/*
-        string saveStr = "";
-        for (int i = 0; i < 10; i++)
-        {
-            if (inv[i])
-            {
-                saveStr += "1";
-            }
-            else
-                saveStr += "0";
-        }
-        PlayerPrefs.SetString("Items", saveStr);
-        Debug.Log(saveStr);
-
-        saveStr = "";
-        for (int i = 0; i < 5; i++)
-        {
-            if (cardInv[i])
-            {
-                saveStr += "1";
-            }
-            else
-                saveStr += "0";
-        }
-        PlayerPrefs.SetString("Cards", saveStr);
-        Debug.Log(saveStr);
-
-        for (int i = 0; i < 5; i++)
-        {
-            PlayerPrefs.SetInt("CardUpgradeLevel" + i, reinforceUIManager.GraphicCards[i].level);
-        }*/
+    {
+        Debug.Log("[Save] " + JsonUtility.ToJson(inventory));
+        PlayerPrefs.SetString("Inventory", JsonUtility.ToJson(inventory));
     }
 
     public void LoadItems()
-    {/*
-        Debug.Log(PlayerPrefs.GetString("Items", "0000000000"));
-        Debug.Log(PlayerPrefs.GetString("Cards", "10000"));
-        string saveStr = PlayerPrefs.GetString("Items", "0000000000");
-        for (int i = 0; i < 10; i++)
+    {
+        Debug.Log("[Load] " + PlayerPrefs.GetString("Inventory", ""));
+        inventory = JsonUtility.FromJson<Inventory>(PlayerPrefs.GetString("Inventory", ""));
+        if(inventory == null)
         {
-            if (saveStr.ToCharArray()[i] == '1')
-            {
-                inv[i] = true;
-                matetials[i].interactable = true;
-            }
-            else
-                inv[i] = false;
+            inventory = new Inventory();
         }
 
-        saveStr = PlayerPrefs.GetString("Cards", "10000");
-        for (int i = 1; i < 5; i++)
+        for(int i = 0; i < 5; i++)
         {
-            if (saveStr.ToCharArray()[i] == '1')
-            {
-                try
-                {
-                    AddCard(i);
-
-                }
-                catch
-                {
-
-                }
-            }
-            else
-                cardInv[i] = false;
+            Debug.Log("card +" + inventory.cardInv[i]);
+            if(inventory.cardInv[i] == true)
+                AddCard(i-1);
         }
 
-        for (int i = 0; i < 5; i++)
+        for(int i = 0; i < 10; i++)
         {
-            for (int j = 1; j < PlayerPrefs.GetInt("CardUpgradeLevel" + i, 0); j++)
+            if(inventory.inv[i])
+                AddItem(i);
+        }
+
+        for(int i = 0; i < 5; i++)
+        {
+            if (inventory.rainforceLevel[i] >= 25)
+                inventory.rainforceLevel[i] = 25;
+            
+            for(int j = 0; j < inventory.rainforceLevel[i]; j++)
             {
-                reinforceUIManager.GraphicCards[i].levelUp();
-                switch (i)
+                switch(i + 1)
                 {
-                    case 0:
-                        reinforceUIManager.reinforcecost[i] *= 100;
-                        break;
                     case 1:
-                        reinforceUIManager.reinforcecost[i] *= 500;
+                        reinforceUIManager.GraphicCards[0].levelUp();
+                        reinforceUIManager.reinforcecost[0] *= 100;
                         break;
                     case 2:
-                        reinforceUIManager.reinforcecost[i] *= 1000;
+                        reinforceUIManager.GraphicCards[1].levelUp();
+                        reinforceUIManager.reinforcecost[1] *= 500;
                         break;
                     case 3:
-                        reinforceUIManager.reinforcecost[i] *= 2500;
+                        reinforceUIManager.GraphicCards[2].levelUp();
+                        reinforceUIManager.reinforcecost[2] *= 1000;
                         break;
                     case 4:
-                        reinforceUIManager.reinforcecost[i] *= 5000;
+                        reinforceUIManager.GraphicCards[3].levelUp();
+                        reinforceUIManager.reinforcecost[3] *= 2500;
+                        break;
+                    case 5:
+                        reinforceUIManager.GraphicCards[4].levelUp();
+                        reinforceUIManager.reinforcecost[4] *= 5000;
                         break;
                 }
             }
-        }*/
+        }
+        uIManager.UpdateUI();
+        Debug.Log("[Loaded] " + JsonUtility.ToJson(inventory));
     }
 }
