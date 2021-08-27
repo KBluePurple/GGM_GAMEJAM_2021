@@ -10127,7 +10127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &915043144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10287,8 +10287,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319.9, y: 1610.9}
-  m_SizeDelta: {x: 1280.3, y: 191.73}
+  m_AnchoredPosition: {x: -233.79004, y: 1610.9}
+  m_SizeDelta: {x: 1452.5, y: 191.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925983334
 MonoBehaviour:
@@ -11702,8 +11702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 806, y: 1574}
-  m_SizeDelta: {x: 269.3, y: 261.19}
+  m_AnchoredPosition: {x: 763.6, y: 1532.9}
+  m_SizeDelta: {x: 354.1, y: 343.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066110678
 MonoBehaviour:
@@ -16388,7 +16388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debt: 250000
-  money: 10000
+  money: 0
 --- !u!1 &1686710077
 GameObject:
   m_ObjectHideFlags: 0
@@ -20469,8 +20469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319.92, y: 1463}
-  m_SizeDelta: {x: 1280.3, y: 191.73}
+  m_AnchoredPosition: {x: -233.8, y: 1463}
+  m_SizeDelta: {x: 1452.5, y: 191.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2115852628
 MonoBehaviour:

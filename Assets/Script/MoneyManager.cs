@@ -10,6 +10,7 @@ public class MoneyManager : MonoBehaviour
 
     private void Start()
     {
+        //PlayerPrefs.DeleteAll();
         uIManager = FindObjectOfType<UIManager>();
         LoadMoneyData();
     }
@@ -24,11 +25,12 @@ public class MoneyManager : MonoBehaviour
     public void SaveMoneyData()
     {
         PlayerPrefs.SetInt("Money", money);
+        PlayerPrefs.Save();
     }
 
     public void LoadMoneyData()
     {
-        PlayerPrefs.GetInt("Money", 0);
+        money = PlayerPrefs.GetInt("Money", 0);
         uIManager.UpdateUI();
     }
 }
